@@ -18,13 +18,20 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatelessWidget {
   final List<Transaction> transactions = [
     Transaction(
-        id: 't1', title: 'New Shoes', amount: 69.99, date: DateTime.now()),
+      id: 't1',
+      title: 'New Shoes',
+      amount: 69.99,
+      date: DateTime.now(),
+    ),
     Transaction(
-        id: 't2',
-        title: 'Weekly Groceries',
-        amount: 16.53,
-        date: DateTime.now()),
+      id: 't2',
+      title: 'Weekly Groceries',
+      amount: 16.53,
+      date: DateTime.now(),
+    ),
   ];
+  String titleInput;
+  String amountInput;
 
   @override
   Widget build(BuildContext context) {
@@ -55,18 +62,25 @@ class MyHomePage extends StatelessWidget {
                     decoration: InputDecoration(
                       labelText: 'Title',
                     ),
+                    onChanged: (val) {
+                      titleInput = val;
+                    },
                   ),
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'Amount',
                     ),
+                    onChanged: (val) => amountInput = val,
                   ),
                   TextButton(
                     child: Text(
                       'Add Transaction',
                       style: TextStyle(color: Colors.purple),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      print(titleInput);
+                      print(amountInput);
+                    },
                   ),
                 ],
               ),
