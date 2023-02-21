@@ -43,6 +43,24 @@ class _UserTransactionState extends State<UserTransaction> {
       amount: 250.00,
       date: DateTime.now(),
     ),
+    Transaction(
+      id: 't5',
+      title: 'Movie',
+      amount: 10.00,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't5',
+      title: 'Electric Bill',
+      amount: 75.27,
+      date: DateTime.now(),
+    ),
+    Transaction(
+      id: 't6',
+      title: 'Water Bill',
+      amount: 15.72,
+      date: DateTime.now(),
+    ),
   ];
 
   void _addNewTransaction(String txTitle, double txAmount) {
